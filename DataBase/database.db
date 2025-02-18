@@ -1,0 +1,26 @@
+INSERT INTO addresses (city, flat_no, landmark, pincode, state, street_name) VALUES ('Mumbai', 'A-101', 'Near Central Park', 400001, 'Maharashtra', 'Marine Drive');
+INSERT INTO addresses (city, flat_no, landmark, pincode, state, street_name) VALUES ('Chennai', 'B-202', 'Opposite City Mall', 411007, 'Maharashtra', 'FC Road');
+INSERT INTO addresses (city, flat_no, landmark, pincode, state, street_name) VALUES ('Delhi', 'C-303', 'Behind Railway Station', 440001, 'Maharashtra', 'Wardha Road');
+INSERT INTO addresses (city, flat_no, landmark, pincode, state, street_name) VALUES ('Hyderabad', 'D-404', 'Near Bibi Ka Maqbara', 431001, 'Maharashtra', 'MGM Road'); 
+INSERT INTO addresses (city, flat_no, landmark, pincode, state, street_name) VALUES ('Pune', 'E-505', 'Beside Botanical Garden', 422001, 'Maharashtra', 'Gangapur Road');
+
+INSERT INTO addresses (city, flat_no, landmark, pincode, state, street_name) VALUES ('Bangalore', 'F-606', 'Near Electronic City', 560100, 'Karnataka', 'Hosur Road');
+INSERT INTO addresses (city, flat_no, landmark, pincode, state, street_name) VALUES ('Kolkata', 'G-707', 'Near Victoria Memorial', 700071, 'West Bengal', 'Queens Way');
+INSERT INTO addresses (city, flat_no, landmark, pincode, state, street_name) VALUES ('Ahmedabad', 'H-808', 'Near Sabarmati Ashram', 380027, 'Gujarat', 'Ashram Road');
+INSERT INTO addresses (city, flat_no, landmark, pincode, state, street_name) VALUES ('Jaipur', 'I-909', 'Near Hawa Mahal', 302002, 'Rajasthan', 'J.L.N Marg');
+INSERT INTO addresses (city, flat_no, landmark, pincode, state, street_name) VALUES ('Lucknow', 'J-1010', 'Near Bara Imambara', 226003, 'Uttar Pradesh', 'Rumi Gate Road');
+INSERT INTO addresses (city, flat_no, landmark, pincode, state, street_name) VALUES ('Bhopal', 'K-1111', 'Near Upper Lake', 462001, 'Madhya Pradesh', 'VIP Road');
+INSERT INTO addresses (city, flat_no, landmark, pincode, state, street_name) VALUES ('Patna', 'L-1212', 'Near Gandhi Maidan', 800001, 'Bihar', 'Fraser Road');
+INSERT INTO addresses (city, flat_no, landmark, pincode, state, street_name) VALUES ('Guwahati', 'M-1313', 'Near Kamakhya Temple', 781001, 'Assam', 'Temple Road');
+INSERT INTO addresses (city, flat_no, landmark, pincode, state, street_name) VALUES ('Chandigarh', 'N-1414', 'Near Rock Garden', 160001, 'Punjab', 'Sector 1');
+INSERT INTO addresses (city, flat_no, landmark, pincode, state, street_name) VALUES ('Thiruvananthapuram', 'O-1515', 'Near Sree Padmanabhaswamy Temple', 695001, 'Kerala', 'M.G. Road');
+
+INSERT INTO users (contact_number, email, first_name, last_name, password, role, address_id) VALUES ('9876543229', 'manager1@gmail.com', 'Amit', 'Patel', '$2a$10$hHsSI0lPYUkcqIgiUMmxFO1dRAHXFZoRtJt7ZrLfi0cREp/bf/Nia', 'ROLE_WAREHOUSE_MANAGER', 6);
+INSERT INTO users (contact_number, email, first_name, last_name, password, role, address_id) VALUES ('9876543225', 'manager2@gmail.com', 'Sneha', 'Kumar', '$2a$10$hHsSI0lPYUkcqIgiUMmxFO1dRAHXFZoRtJt7ZrLfi0cREp/bf/Nia', 'ROLE_WAREHOUSE_MANAGER', 7);
+INSERT INTO users (contact_number, email, first_name, last_name, password, role, address_id) VALUES ('9876543226', 'manager3@gmail.com', 'Ravi', 'Sharma', '$2a$10$hHsSI0lPYUkcqIgiUMmxFO1dRAHXFZoRtJt7ZrLfi0cREp/bf/Nia', 'ROLE_WAREHOUSE_MANAGER', 8);
+INSERT INTO users (contact_number, email, first_name, last_name, password, role, address_id) VALUES ('9876543227', 'manager4@gmail.com', 'Priya', 'Verma', '$2a$10$hHsSI0lPYUkcqIgiUMmxFO1dRAHXFZoRtJt7ZrLfi0cREp/bf/Nia', 'ROLE_WAREHOUSE_MANAGER', 9);
+INSERT INTO users (contact_number, email, first_name, last_name, password, role, address_id) VALUES ('9876543228', 'manager5@gmail.com', 'Vijay', 'Rao', '$2a$10$hHsSI0lPYUkcqIgiUMmxFO1dRAHXFZoRtJt7ZrLfi0cREp/bf/Nia', 'ROLE_WAREHOUSE_MANAGER', 10);
+
+INSERT INTO users (contact_number, email, first_name, last_name, password, role, address_id) VALUES ('987688779', 'admin@gmail.com', 'Admin', 'N', '$2a$10$hHsSI0lPYUkcqIgiUMmxFO1dRAHXFZoRtJt7ZrLfi0cREp/bf/Nia', 'ROLE_ADMIN', 11);
+
+INSERT INTO Warehouse(location_id, manager_id) VALUES (1,1), (2,2), (3,3), (4,4), (5,5);
