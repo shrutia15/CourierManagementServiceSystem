@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: courier-service-management-system
+spec:
+  selector:
+    matchLabels:
+      app: courier-service-management-system
+  template:
+    metadata:
+      labels:
+        app: courier-service-management-system
+    spec:
+      containers:
+      - name: courier-service-management-system
+        image: shruti1505/courier-service-management-system:{{ .Values.image.tag }}
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
