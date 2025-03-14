@@ -30,8 +30,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-           context: .
-           file: ./Dockerfile
+           context: ./frontend
+           file: ./frontend/Dockerfile
            push: true
            tags: ${{ secrets.DOCKERHUB_USERNAME }}/courier-service-management-system:${{ github.run_id }}
            platforms: linux/amd64,linux/arm64
