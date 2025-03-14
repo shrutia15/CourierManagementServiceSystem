@@ -1,0 +1,56 @@
+name: CI
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'helm/**'
+      - Readme.md
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup docker build
+        uses: docker/setup-buildx-action@v1
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v3
+        with:
+           username: ${{ secrets.DOCKERHUB_USERNAME }}
+           password: ${{ secrets.DOCKERHUB_TOKEN }}
+           logout: true
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+           context: .
+           file: ./Dockerfile
+           push: true
+           tags: ${{ secrets.DOCKERHUB_USERNAME }}/courier-service-management-system:${{ github.run_id }}
+           platforms: linux/amd64,linux/arm64
+
+  update-helm-chart:
+    runs-on: ubuntu-latest
+    needs: push
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update tag
+        run: |
+          sed -i 's/tag: .*/tag: "${{github.run_id}}"/' helm/courierservice-frontend-chart/values.yaml
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.email "shruti.awate1502@gmail.com"
+          git config --global user.name "Shruti"
+          git add helm/courierservice-frontend-chart/values.yaml
+          git commit -m "Update tag in Helm chart"
+          git push
