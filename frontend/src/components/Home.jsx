@@ -28,7 +28,7 @@ function Home() {
 
       <div className="hero-section">
         <div className="hero-content">
-          <h1>Fast & Reliable Courier Service</h1>
+          <h1>Fast, Reliable & Secured Courier Service</h1>
           <p>Track your shipments, manage deliveries, and experience seamless courier management.</p>
 
           {/* Tracking Form */}
